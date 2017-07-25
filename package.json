@@ -1,0 +1,47 @@
+{
+  "name": "react-formidably",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "babel lib -d build --ignore spec.js,test.js",
+    "build:watch": "babel lib -d build --ignore spec.js,test.js --watch",
+    "prepublish": "npm run build",
+    "test": "jest",
+    "lint": "eslint lib",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "author": "Matt Johnson <matt@alchemy.codes>",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "dependencies": {
+    "deep-equal": "^1.0.1",
+    "prop-types": "^15.5.10"
+  },
+  "devDependencies": {
+    "@kadira/storybook": "^2.21.0",
+    "@pgprojectx/react-catalyst": "^0.0.2",
+    "@storybook/react": "^3.0.1",
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.5.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-jest": "^20.0.3",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-react": "^7.0.1",
+    "jest": "^20.0.4",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-test-renderer": "^15.5.4"
+  }
+}

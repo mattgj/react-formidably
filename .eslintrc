@@ -1,0 +1,25 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "plugins": [
+    "import",
+    "jest"
+  ],
+  "env": {
+    "jest/globals": true
+  },
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-wrap-multilines": "off",
+    "no-confusing-arrow": "off"
+  },
+  "settings": {
+    "import/core-modules": [
+      "react",
+      "react-dom",
+      "@storybook/react" ,
+      "@storybook/addon-actions",
+      "@storybook/addon-links"
+    ]
+  }
+}
