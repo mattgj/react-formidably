@@ -31,7 +31,11 @@ const formTemplate = {
     props: { placeholder: 'Field2', required: true },
     validation: [{ match: /^test$/, errorProps: { error: 'Invalid value' } }],
   },
-  field3: { type: 'input', props: { placeholder: 'Field3' } },
+  field3: {
+    type: 'input',
+    props: { placeholder: 'Field3' },
+    validation: [{ match: /^test$/, errorProps: { error: 'Invalid value' } }],
+  },
   'field4.field5': { type: 'input', props: { placeholder: 'Field5' } },
   'field4.field6': { type: 'input2', props: { placeholder: 'Field6' } },
   field7: {
@@ -52,7 +56,7 @@ const formTemplate = {
 const data = {
   field1: 'Button1',
   field2: ['a', 'b'],
-  field3: 'Button3',
+  field3: 'field3',
   field4: {
     field5: 'field5 text',
   },
