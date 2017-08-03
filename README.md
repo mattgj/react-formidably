@@ -4,19 +4,19 @@ React-Formidably allows you to create dynamic forms from JSON.
 
 ## Install
 ```sh
-npm install @pgprojectx/react-formidably
+npm install react-formidably
 ```
 or
 ```sh
-yarn add @pgprojectx/react-formidably
+yarn add react-formidably
 ```
 
 ## Example
 
 Somewhere in your app...
 ```JavaScript
-import { FormProvider } from '@pgprojectx/react-formidably';
-import { Input } from '@pgprojectx/react-catalyst';
+import { FormProvider } from 'react-formidably';
+import { Input } from 'some-ui-library';
 
 const formConfig = {
   input: { component: Input, valueProp: 'defaultValue', event: { name: 'onChange' } }
@@ -39,11 +39,11 @@ class MyApp extends React.Component {
 
 Somewhere else in your app...
 ```JavaScript
-import Form from '@pgprojectx/react-formidably';
+import Form from 'react-formidably';
 
 const formTemplate = {
   field1: { type: 'input', props: { placeholder: 'Field1' } },
-  field2: { type: 'input', props: { placeholder: 'Field1' } }
+  field2: { type: 'input', props: { placeholder: 'Field2' } }
 };
 
 const formData = {

@@ -1,22 +1,23 @@
 {
   "name": "react-formidably",
   "version": "1.0.0",
-  "description": "",
+  "description": "Create dynamic forms from JSON",
   "main": "build/index.js",
   "scripts": {
-    "build": "babel lib -d build --ignore spec.js,test.js",
-    "build:watch": "babel lib -d build --ignore spec.js,test.js --watch",
-    "prepublish": "npm run build",
+    "build": "NODE_ENV=production babel lib -d build --ignore spec.js,test.js",
+    "build:watch": "NODE_ENV=development babel lib -d build --ignore spec.js,test.js --watch",
+    "clean": "rm -rf build",
+    "prepublish": "npm run clean && npm run build && npm run test",
     "test": "jest",
     "lint": "eslint lib",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "author": "Matt Johnson <matt@alchemy.codes>",
-  "license": "ISC",
+  "author": "Matt Johnson <matt@debugroom.com>",
+  "license": "MIT",
   "peerDependencies": {
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react": "^15.6.0",
+    "react-dom": "^15.6.0"
   },
   "dependencies": {
     "deep-equal": "^1.0.1",
@@ -40,8 +41,8 @@
     "eslint-plugin-jsx-a11y": "^5.0.3",
     "eslint-plugin-react": "^7.0.1",
     "jest": "^20.0.4",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
+    "react": "^15.6.0",
+    "react-dom": "^15.6.0",
     "react-test-renderer": "^15.5.4"
   }
 }
